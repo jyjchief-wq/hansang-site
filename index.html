@@ -10,6 +10,14 @@
 <helmet>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>한상 HANSANG</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="한상 HANSANG">
+<meta property="og:title" content="한상 HANSANG">
+<meta property="og:description" content="한 그릇의 맛부터 한 컷의 장면까지 — 한상, 한상F&amp;B, 한상필름">
+<meta property="og:url" content="https://www.hansangco.kr/">
+<meta property="og:image" content="https://www.hansangco.kr/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="description" content="한 그릇의 맛부터 한 컷의 장면까지 — 한상, 한상F&amp;B, 한상필름">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800;900&amp;display=swap">
@@ -21,7 +29,7 @@
 @font-face{font-family:"Kakao Small Sans";src:url("fonts/KakaoSmallSans-Light.ttf") format("truetype");font-weight:300;font-display:swap}
 @font-face{font-family:"Kakao Small Sans";src:url("fonts/KakaoSmallSans-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
 @font-face{font-family:"Kakao Small Sans";src:url("fonts/KakaoSmallSans-Bold.ttf") format("truetype");font-weight:700;font-display:swap}
-:root{--color-bg:#F2F3E6;--color-accent:oklch(0.8 0.085 30);--color-accent-600:oklch(0.74 0.095 30);--color-accent-700:oklch(0.5 0.1 30);--hs-floor:#F4B9AC;--font-heading:Roboto,"Kakao Big Sans",sans-serif;--font-body:Roboto,"Kakao Small Sans",sans-serif;--font-heading-weight:800}
+:root{--color-bg:#E4E4E4;--color-accent:oklch(0.8 0.085 30);--color-accent-600:oklch(0.74 0.095 30);--color-accent-700:oklch(0.5 0.1 30);--hs-floor:#F4B9AC;--font-heading:Roboto,"Kakao Big Sans",sans-serif;--font-body:Roboto,"Kakao Small Sans",sans-serif;--font-heading-weight:800}
 body,button,input{font-family:var(--font-body)}
 body{margin:0;background:var(--color-bg);color:var(--color-text);word-break:keep-all;text-wrap:pretty}
 a{color:inherit;text-decoration:none}
@@ -54,7 +62,7 @@ a:hover{color:var(--color-accent-700)}
     </div>
   </section>
 
-  <section id="m-intro" data-screen-label="01b 한상 필름 영상" style="position:relative;height:820px;overflow:hidden;background:#000000">
+  <section id="m-intro" data-screen-label="01b 한상 필름 영상" style="position:relative;height:820px;overflow:hidden;background:#E4E4E4">
     <video src="video/intro-film.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="metadata" ref="{{ introVideo }}" onEnded="{{ replayHero }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video>
   </section>
 
@@ -64,17 +72,12 @@ a:hover{color:var(--color-accent-700)}
       <div style="display:flex;justify-content:center;align-items:center;padding:24px 24px 16px"><div style="width:100%;aspect-ratio:403/240;position:relative;position:relative;overflow:hidden"><img src="images/logo-hwang.jpg" alt="황할머니갈비집 로고" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:50% 50%;display:block"></div></div>
       <div style="position:relative;margin:0 24px">
         <div id="st-b1" style="display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none">
-          <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/hwang-store-1b.jpg" alt="황할머니갈비집 매장 사진 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/hwang-store-2-web.jpg" alt="황할머니갈비집 매장 사진 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/hwang-store-0.jpg" alt="황할머니갈비집 매장 사진 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/hwang-store-1b.jpg" alt="황할머니갈비집 매장 사진 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+        <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/hwang-store-2-web.jpg" alt="황할머니갈비집 매장 사진 3" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%;display:block"></div>
         </div>
         <button type="button" aria-label="이전 사진" data-target="st-b1" data-dir="-1" onClick="{{ slideOne }}" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,0.85);color:#201e1d;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0" style-hover="background:#FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button>
         <button type="button" aria-label="다음 사진" data-target="st-b1" data-dir="1" onClick="{{ slideOne }}" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,0.85);color:#201e1d;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0" style-hover="background:#FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button>
-      </div>
-      <div style="display:grid;grid-auto-flow:column;grid-auto-columns:64%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:24px 24px 0;scrollbar-width:none">
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/m-b1-m1.webp" alt="메뉴 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/m-b1-m2.webp" alt="메뉴 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        
-        
       </div>
       <div style="padding:28px 24px 0;display:flex;flex-direction:column;gap:12px">
         <h3 style="font-weight: 600; font-size: 30px; letter-spacing: -0.04em; line-height: 1.2; margin: 0">황할머니갈비집</h3>
@@ -87,18 +90,12 @@ a:hover{color:var(--color-accent-700)}
       <div style="display:flex;justify-content:center;align-items:center;padding:24px 24px 16px"><div style="width:100%;aspect-ratio:404/242;position:relative;position:relative;overflow:hidden"><img src="images/logo-eulji.jpg" alt="을지포차 로고" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:50% 50%;display:block"></div></div>
       <div style="position:relative;margin:0 24px">
         <div id="st-b2" style="display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none">
-          <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-store-1.jpg" alt="을지포차 매장 사진 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-          <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-store-3.jpg" alt="을지포차 매장 사진 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-          <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-store-4.jpg" alt="을지포차 매장 사진 3" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-store-1.jpg" alt="을지포차 매장 사진 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-store-3.jpg" alt="을지포차 매장 사진 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-store-4.jpg" alt="을지포차 매장 사진 3" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
         </div>
         <button type="button" aria-label="이전 사진" data-target="st-b2" data-dir="-1" onClick="{{ slideOne }}" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,0.85);color:#201e1d;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0" style-hover="background:#FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button>
         <button type="button" aria-label="다음 사진" data-target="st-b2" data-dir="1" onClick="{{ slideOne }}" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,0.85);color:#201e1d;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0" style-hover="background:#FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button>
-      </div>
-      <div style="display:grid;grid-auto-flow:column;grid-auto-columns:64%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:24px 24px 0;scrollbar-width:none">
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/m-b2-m1.webp" alt="메뉴 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/m-b2-m2.webp" alt="메뉴 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-menu-pajeon.jpg" alt="해물튀김파전" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/eulji-menu-yukhoe.jpg" alt="투플 육회" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
       </div>
       <div style="padding:28px 24px 0;display:flex;flex-direction:column;gap:12px">
         <h3 style="font-weight: 600; font-size: 30px; letter-spacing: -0.04em; line-height: 1.2; margin: 0">을지포차</h3>
@@ -111,18 +108,12 @@ a:hover{color:var(--color-accent-700)}
       <div style="display:flex;justify-content:center;align-items:center;padding:24px 24px 16px"><div style="width:100%;aspect-ratio:405/243;position:relative;position:relative;overflow:hidden"><img src="images/logo-dakbal.jpg" alt="닭발에미친집 로고" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:50% 50%;display:block"></div></div>
       <div style="position:relative;margin:0 24px">
         <div id="st-b3" style="display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none">
-          <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-store-1.jpg" alt="닭발에미친집 매장 사진 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-          <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-store-2.jpg" alt="닭발에미친집 매장 사진 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-          <div style="aspect-ratio:4/5;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-store-3b.jpg" alt="닭발에미친집 매장 사진 3" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-store-1.jpg" alt="닭발에미친집 매장 사진 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-store-2.jpg" alt="닭발에미친집 매장 사진 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
+          <div style="aspect-ratio:16/9;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-store-3b.jpg" alt="닭발에미친집 매장 사진 3" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
         </div>
         <button type="button" aria-label="이전 사진" data-target="st-b3" data-dir="-1" onClick="{{ slideOne }}" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,0.85);color:#201e1d;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0" style-hover="background:#FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button>
         <button type="button" aria-label="다음 사진" data-target="st-b3" data-dir="1" onClick="{{ slideOne }}" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,0.85);color:#201e1d;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0" style-hover="background:#FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button>
-      </div>
-      <div style="display:grid;grid-auto-flow:column;grid-auto-columns:64%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:24px 24px 0;scrollbar-width:none">
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/m-b3-m1.webp" alt="메뉴 1" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/m-b3-m2.webp" alt="메뉴 2" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-menu-soup.jpg" alt="국물뼈닭발" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
-        <div style="aspect-ratio:1;scroll-snap-align:start;position:relative;overflow:hidden"><img src="images/dakbal-menu-charcoal.jpg" alt="숯불닭발" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block"></div>
       </div>
       <div style="padding:28px 24px 0;display:flex;flex-direction:column;gap:12px">
         <h3 style="font-weight: 600; font-size: 30px; letter-spacing: -0.04em; line-height: 1.2; margin: 0">닭발에미친집</h3>
@@ -143,12 +134,12 @@ a:hover{color:var(--color-accent-700)}
     <div style="border-top:2px solid var(--color-divider);padding-top:28px;margin-top:48px">
       <div style="display:flex;flex-direction:column;gap:8px;padding:0 24px"><h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:28px;letter-spacing:-0.04em;line-height:1.2;margin:0">Reels</h3></div>
       <div style="display:grid;grid-auto-flow:column;grid-auto-columns:56%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:20px 24px 0;scrollbar-width:none">
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-1.mp4" muted="{{ true }}" loop="" playsInline="{{ true }}" preload="metadata" controls="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-2.mp4" muted="{{ true }}" loop="" playsInline="{{ true }}" preload="metadata" controls="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-3.mp4" muted="{{ true }}" loop="" playsInline="{{ true }}" preload="metadata" controls="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-4.mp4" muted="{{ true }}" loop="" playsInline="{{ true }}" preload="metadata" controls="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-5.mp4" muted="{{ true }}" loop="" playsInline="{{ true }}" preload="metadata" controls="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-6.mp4" muted="{{ true }}" loop="" playsInline="{{ true }}" preload="metadata" controls="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-1.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-2.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-3.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-4.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-5.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-6.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
       </div>
     </div>
     <div style="border-top:2px solid var(--color-divider);padding-top:28px;margin-top:48px">
@@ -281,6 +272,7 @@ class Component extends DCLogic {
         }, { root: this.scroller.current, threshold: 0.25 });
         el._io.observe(el);
       },
+      reelVideo: (el) => { if (!el || el.__io) return; el.muted = true; el.defaultMuted = true; el.volume = 0; el.loop = true; el.setAttribute('muted', ''); el.setAttribute('playsinline', ''); el.__io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.play && el.play().catch(() => {}); } else { el.pause && el.pause(); } }, { threshold: 0.2 }); el.__io.observe(el); },
       replayHero: (e) => { const v = e.currentTarget; v.currentTime = 0; v.play().catch(() => {}); },
       heroSrc: 'images/hansang-hero' + sfx + '.svg', gHansang: 'images/group2-hansang' + sfx + '.svg', gFnb: 'images/group2-fnb' + sfx + '.svg', gFilm: 'images/group3-film' + sfx + '.svg',
       scroller: this.scroller,
