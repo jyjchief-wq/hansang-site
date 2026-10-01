@@ -10,6 +10,7 @@
 <helmet>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>한상 HANSANG</title>
+<link rel="preload" href="video/hero-4.mp4" as="video" type="video/mp4" fetchpriority="high">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="한상 HANSANG">
 <meta property="og:title" content="한상 HANSANG">
@@ -50,7 +51,7 @@ a:hover{color:var(--color-accent-700)}
   
 
   <section id="m-about" data-screen-label="01 About" style="position:relative;height:calc(100svh - 54px);min-height:520px;overflow:hidden;background:#000000;color:var(--color-text)">
-    <video ref="{{ heroVideo }}" src="video/hero-4.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" onEnded="{{ replayHero }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+    <video ref="{{ heroVideo }}" src="video/hero-4.mp4" preload="auto" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" onEnded="{{ replayHero }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
     <div style="position:relative;height:100%;pointer-events:none;display:flex;flex-direction:column;padding:40px 24px 96px;box-sizing:border-box">
       <div style="flex:1;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start">
         <h1 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:72px;line-height:0.95;letter-spacing:-0.06em;margin:0;text-align:left;color:#FFFFFF;text-shadow:0 0 2px rgba(0,0,0,0.35),0 2px 12px rgba(0,0,0,0.45),0 0 32px rgba(0,0,0,0.35)">
@@ -63,7 +64,7 @@ a:hover{color:var(--color-accent-700)}
   </section>
 
   <section id="m-intro" data-screen-label="01b 한상 필름 영상" style="position:relative;height:820px;overflow:hidden;background:#E4E4E4">
-    <video src="video/intro-film.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="metadata" ref="{{ introVideo }}" onEnded="{{ replayHero }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video>
+    <video src="video/intro-film.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" ref="{{ introVideo }}" onEnded="{{ replayHero }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video>
   </section>
 
   
@@ -134,12 +135,12 @@ a:hover{color:var(--color-accent-700)}
     <div style="border-top:2px solid var(--color-divider);padding-top:28px;margin-top:48px">
       <div style="display:flex;flex-direction:column;gap:8px;padding:0 24px"><h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:28px;letter-spacing:-0.04em;line-height:1.2;margin:0">Reels</h3></div>
       <div style="display:grid;grid-auto-flow:column;grid-auto-columns:56%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:20px 24px 0;scrollbar-width:none">
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-1.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-2.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-3.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-4.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-5.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
-        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-6.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-1.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-2.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-3.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-4.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-5.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
+        <div style="aspect-ratio:9/16;scroll-snap-align:start;position:relative;min-width:0;overflow:hidden;background:var(--color-text)"><video src="video/reel-6.mp4" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" disablePictureInPicture="{{ true }}" ref="{{ reelVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video></div>
       </div>
     </div>
     <div style="border-top:2px solid var(--color-divider);padding-top:28px;margin-top:48px">
@@ -279,7 +280,7 @@ class Component extends DCLogic {
         }, { root: this.scroller.current, threshold: 0.25 });
         el._io.observe(el);
       },
-      reelVideo: (el) => { if (!el || el.__io) return; el.muted = true; el.defaultMuted = true; el.volume = 0; el.loop = true; el.setAttribute('muted', ''); el.setAttribute('playsinline', ''); el.__io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.play && el.play().catch(() => {}); } else { el.pause && el.pause(); } }, { threshold: 0.2 }); el.__io.observe(el); },
+      reelVideo: (el) => { if (!el || el.__io) return; el.muted = true; el.defaultMuted = true; el.volume = 0; el.loop = true; el.setAttribute('muted', ''); el.setAttribute('playsinline', ''); el.__io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.play && el.play().catch(() => {}); } else { el.pause && el.pause(); } }, { threshold: 0.01, rootMargin: '200px 0px' }); el.__io.observe(el); },
       replayHero: (e) => { const v = e.currentTarget; v.currentTime = 0; v.play().catch(() => {}); },
       heroSrc: 'images/hansang-hero' + sfx + '.svg', gHansang: 'images/group2-hansang' + sfx + '.svg', gFnb: 'images/group2-fnb' + sfx + '.svg', gFilm: 'images/group3-film' + sfx + '.svg',
       scroller: this.scroller,
